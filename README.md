@@ -1,42 +1,50 @@
-# Slim Framework 4 Skeleton Application
 
-[![Coverage Status](https://coveralls.io/repos/github/slimphp/Slim-Skeleton/badge.svg?branch=master)](https://coveralls.io/github/slimphp/Slim-Skeleton?branch=master)
+# Alfabetização em Augmented Reality
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 4 application. This application uses the latest Slim 4 with Slim PSR-7 implementation and PHP-DI container implementation. It also uses the Monolog logger.
 
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
+**Faculdade**: FATEC Jessen Vidal de São José dos Campos
 
-## Install the Application
+**Aluno**: Gabriel Venegas
+**RA**:1460481821031
 
-Run this command from the directory in which you want to install your new Slim Framework application.
+**Aluno**: Jefferson Lopes
+**RA**:1460481821041
+
+**Aluno**: Matheus Henrique Ribeiro Silva
+**RA**:1460481821061
+
+**Professor**: Giuliano Araujo Bertoti
+
+**4º Semestre ADS/Turma A - Engenharia de Software III**
+
+## Descrição
+
+Projeto de Engenharia de Software III com o intuito de auxiliar no processo de alfabetização, utilizando da técnologia AR.js. Utilizamos o Heroku para o deploy da aplicação, com Php e o framework Slim no back-end. Nossa escolha foi em base de que o Heroku nos proporciona deploys automáticos quando a branch Master é atualizada
+
+## Acessando a aplicação
+
+link do webapp: https://ar-literacy.herokuapp.com/
+
+## Instalando a aplicação localmente
+
+Rode esse comando no diretório que você pretende instalar a aplicação
 
 ```bash
-composer create-project slim/slim-skeleton [my-app-name]
+git clone git@github.com:mflJefferson/ar-literacy-slim.git
 ```
 
-Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
-
-* Point your virtual host document root to your new application's `public/` directory.
-* Ensure `logs/` is web writable.
-
-To run the application in development, you can run these commands 
+Atualize as dependẽncias necessárias
 
 ```bash
-cd [my-app-name]
+cd ar-literaly-slim
+composer update
+```
+
+Para executar a aplicação
+
+```bash
 composer start
 ```
+Depois disso abra `http://localhost:8080` no seu navegador
 
-Or you can use `docker-compose` to run the app with `docker`, so you can run these commands:
-```bash
-cd [my-app-name]
-docker-compose up -d
-```
-After that, open `http://localhost:8080` in your browser.
-
-Run this command in the application directory to run the test suite
-
-```bash
-composer test
-```
-
-That's it! Now go build something cool.
+Pronto, agora você pode usar e alterar a aplicação localmente!
