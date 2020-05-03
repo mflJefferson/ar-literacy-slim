@@ -33,7 +33,7 @@ class IndexController extends Controller
     public function index2($request, $response)
     {
 
-        return $this->view->render($response, 'base/index.twig', [
+        return $this->view->render($response, 'words/bola.html', [
             'a_variable' => 'Hello World',
             'others' => [
                 'a' => 1,
