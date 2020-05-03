@@ -3,13 +3,46 @@
 <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
 <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"> </script>
-<body style='margin : 0px; overflow: hidden;'>
-<a-scene stats embedded arjs='trackingMethod: best;'>
-    <a-marker preset="hiro">
-        <a-box position='0 1 0' material='color: blue;'>
-        </a-box>
-    </a-marker>
-    <a-entity camera></a-entity>
-</a-scene>
+<body class="bg-dark text-white" style='margin : 0px; overflow: hidden;'>
+<div class="container text-center">
+    <a-scene stats embedded arjs='trackingMethod: best;'>
+        <a-marker preset="hiro">
+            <a-box position='0 1 0' material='color: blue;'>
+            </a-box>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <form>
+                <div class="form-group">
+                    <textarea name="input" id="text-input" class="form-control"
+                              placeholder="type something"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="rate">Rate</label>
+                    <div id="rate-value" class="badge badge-primary float-right">1</div>
+                    <input type="range" id="rate" class="custom-range"
+                    min="0.5" max="2" value="1" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label for="pitch">Pitch</label>
+                    <div id="pitch-value" class="badge badge-primary float-right">1</div>
+                    <input type="range" id="pitch" class="custom-range"
+                           min="0" max="2" value="1" step="0.1">
+                </div>
+                <div class="form-group">
+                    <select name="" id="voice-select"
+                    class="form-control"></select>
+                </div>
+                <button class="btn btn-light btn-lg btn-block">
+                    oi
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
 </body>
 </html>
