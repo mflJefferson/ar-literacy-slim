@@ -39,7 +39,7 @@ git clone git@github.com:mflJefferson/ar-literacy-slim.git
 Atualize as dependẽncias necessárias
 
 ```bash
-cd ar-literaly-slim
+cd ar-literacy-slim
 composer update
 ```
 
