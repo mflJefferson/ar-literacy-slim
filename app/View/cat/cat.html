@@ -11,7 +11,10 @@
 
 <a-scene stats embedded arjs='trackingMethod: best;'>
     <a-marker preset="hiro">
-        <a-entity gltf-model="url(Mesh_Cat.gltf)"></a-entity>
+        <a-assets>
+            <a-asset-item id="cat" src="/template/assets/model/cat/Mesh_Cat.gltf"></a-asset-item>
+        </a-assets>
+        <a-entity gltf-model="#cat"></a-entity>
     </a-marker>
     <a-entity camera></a-entity>
 </a-scene>
