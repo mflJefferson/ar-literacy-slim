@@ -10,11 +10,8 @@
 <body style='margin : 0px; overflow: hidden;'>
 
 <a-scene stats embedded arjs='trackingMethod: best;'>
-    <a-assets>
-        <a-asset-item id="cat" src="/template/assets/model/cat/scene.gltf"></a-asset-item>
-    </a-assets>
     <a-marker preset="hiro">
-        <a-entity gltf-model="#cat"></a-entity>
+        <a-entity gltf-model="url(scene.gltf)"></a-entity>
     </a-marker>
     <a-entity camera></a-entity>
 </a-scene>
