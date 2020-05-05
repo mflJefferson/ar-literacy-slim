@@ -33,7 +33,7 @@ class IndexController extends Controller
     public function index2($request, $response)
     {
 
-        return $this->view->render($response, 'words/bola.html', [
+        return $this->view->render($response, 'cat/cat.html', [
             'a_variable' => 'Hello World',
             'others' => [
                 'a' => 1,
