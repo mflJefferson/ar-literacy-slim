@@ -34,6 +34,8 @@ Migração pro github pages, e finalizado o menu
 
 <p><img src="https://i.imgur.com/p02mmeR.png" alt="Menu"/><p>
 
+No menu o usuário escolherá a palavra que será o teste, começando com palavras simples e lentamente dificultando (número de sílabas e consoantes). Ao clicar na imagem ele é levado ao teste, onde deverá mostrar os marcadores em ordem para formar a palavra.
+
 Próximo passo, gerar os customs markers, procurar mais modelos 3d (Temos somente um gato no momento), e escrever a lógica de para testar o usuário.
 
 
