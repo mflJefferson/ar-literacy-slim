@@ -22,32 +22,18 @@
 
 ## Descrição
 
-Projeto de Engenharia de Software III com o intuito de auxiliar no processo de alfabetização, utilizando da técnologia AR.js. Utilizamos o Heroku para o deploy da aplicação, com Php e o framework Slim no back-end. Nossa escolha foi em base de que o Heroku nos proporciona deploys automáticos quando a branch Master é atualizada
+Projeto de Engenharia de Software III com o intuito de auxiliar no processo de alfabetização, utilizando da técnologia AR.js. Utilizamos o Github Pages para o deploy da aplicação.
 
 ## Acessando a aplicação
 
-link do webapp: https://ar-literacy.herokuapp.com/
+link do projeto: https://mfljefferson.github.io/ar-literacy-slim/
 
-## Instalando a aplicação localmente
+## Atualização 02/06/2020
 
-Rode esse comando no diretório que você pretende instalar a aplicação
+Migração pro github pages, e finalizado o menu
 
-```bash
-git clone git@github.com:mflJefferson/ar-literacy-slim.git
-```
+<p><img src="https://i.imgur.com/p02mmeR.png" alt="Menu"/><p>
 
-Atualize as dependẽncias necessárias
+Próximo passo, gerar os customs markers, procurar mais modelos 3d (Temos somente um gato no momento), e escrever a lógica de para testar o usuário.
 
-```bash
-cd ar-literacy-slim
-composer update
-```
 
-Para executar a aplicação
-
-```bash
-composer start
-```
-Depois disso abra `http://localhost:8080` no seu navegador
-
-Pronto, agora você pode usar e alterar a aplicação localmente!
