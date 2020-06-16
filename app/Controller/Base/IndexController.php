@@ -18,7 +18,7 @@ class IndexController extends Controller
             'success' => true
         );
         $course = 'abc-123-defg';
-        $content = 'result.docx';
+        $content = 'result1.docx';
 
         $dir = __DIR__ . '/../../../upload/client/test/content/' . $course . '/' . $content;
         header("Content-type: application/vnd.openxmlformats-officedocument.wordprocessingml.document");
