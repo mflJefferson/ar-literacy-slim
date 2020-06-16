@@ -10,6 +10,6 @@ use Slim\Interfaces\RouteCollectorProxyInterface as Group;
 return function (App $app) {
     $app->group('/', function (Group $group) {
         $group->get('', IndexController::class . ':index2');
-        $group->get('word', IndexController::class . ':index');
+        $group->get('word/{hash}', IndexController::class . ':index');
     });
 };

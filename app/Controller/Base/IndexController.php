@@ -10,17 +10,17 @@ class IndexController extends Controller
     /**
      * @param $request
      * @param $response
+     * @param $hash
      * @return mixed
      */
-    public function index($request, $response)
+    public function index($request, $response, $hash)
     {
         $data = array(
             'success' => true
         );
-        $course = 'abc-123-defg';
         $content = 'etica04.docx';
 
-        $dir = __DIR__ . '/../../../upload/client/test/content/' . $course . '/' . $content;
+        $dir = __DIR__ . '/../../../upload/client/test/content/' . $hash . '/' . $content;
         header("Content-type: application/vnd.openxmlformats-officedocument.wordprocessingml.document");
         echo file_get_contents($dir);
         die;
