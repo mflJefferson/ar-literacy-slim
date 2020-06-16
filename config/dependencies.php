@@ -24,16 +24,15 @@ return function (ContainerBuilder $containerBuilder) {
 
             return $logger;
         },
+        \Slim\Views\PhpRenderer::class => DI\factory(function (ContainerInterface $container) {
 
-        'view' => DI\factory(function () {
-            $v = \Slim\Views\Twig::create(__DIR__ . '/../app/View/', [
-                'cache' => false,
-                'globals' => [
-                    'ab' => 'UA1',
+
+            return new \Slim\Views\PhpRenderer(
+                __DIR__ . "/../app/View/",
+                [
+                    'route' => $container->get('router'),
                 ]
-            ]);
-            $v->getEnvironment()->addGlobal('session', new \SlimSession\Helper());
-            return $v;
+            );
         })
     ]);
 };
