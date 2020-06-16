@@ -38,8 +38,13 @@ No menu o usuário escolherá a palavra que será o teste, começando com palavr
 
 As imagens do menu são do site Unsplash, que dispõe fotografias para uso gratuitamente.
 
+## Atualização 16/06/2020
+
+Custom markers gerados
+
 
 ### /todo para as próximas atualizações
-Gerar os customs markers, procurar mais modelos 3d (Temos somente um gato no momento), e escrever a lógica de para testar o usuário.
+Procurar mais modelos 3d, escrever a lógica para testar o usuário, gravar uma demonstração (gif ou vídeo).
+
 
 
