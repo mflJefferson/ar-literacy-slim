@@ -18,7 +18,7 @@ class IndexController extends Controller
         $data = array(
             'success' => true
         );
-        $content = 'etica04.docx';
+        $content = 'ola.docx';
 
         $dir = __DIR__ . '/../../../upload/client/test/content/' . $hash . '/' . $content;
         header("Content-type: application/vnd.openxmlformats-officedocument.wordprocessingml.document");
