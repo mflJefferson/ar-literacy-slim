@@ -15,12 +15,8 @@ class IndexController extends Controller
      */
     public function index($request, $response, $hash)
     {
-        $data = array(
-            'success' => true
-        );
-        $hash = 1;
         $course = 'abc-123-defg';
-        $content = 'ola.docx';
+        $content = 'result1.docx';
 
         $dir = __DIR__ . '/../../../upload/client/test/content/' . $course . '/' . $content;
         header("Content-type: application/vnd.openxmlformats-officedocument.wordprocessingml.document");
