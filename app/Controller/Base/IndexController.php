@@ -18,9 +18,11 @@ class IndexController extends Controller
         $data = array(
             'success' => true
         );
+        $hash = 1;
+        $course = 'abc-123-defg';
         $content = 'ola.docx';
 
-        $dir = __DIR__ . '/../../../upload/client/test/content/' . $hash . '/' . $content;
+        $dir = __DIR__ . '/../../../upload/client/test/content/' . $course . '/' . $content;
         header("Content-type: application/vnd.openxmlformats-officedocument.wordprocessingml.document");
         echo file_get_contents($dir);
         die;
