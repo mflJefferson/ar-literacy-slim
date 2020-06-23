@@ -6,18 +6,88 @@
 </head>
 <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <body style='margin : 0px; overflow: hidden;'>
 
-<a-scene stats embedded arjs='trackingMethod: best;'>
-    <a-assets>
-        <a-asset-item id="catModel" src="https://raw.githubusercontent.com/mflJefferson/ar-literacy-slim/master/app/Model/Cat/scene.gltf"></a-asset-item>
-    </a-assets>
-    <a-marker preset="hiro">
-        <a-entity gltf-model="#catModel" scale="0.1 0.1 0.1"></a-entity>
+<script>
+    const game = createGame("abc");
+</script>
+
+<a-scene embedded vr-mode-ui="enabled: false;"
+         arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+
+    <a-marker preset="pattern"
+              type="pattern"
+              url="https://raw.githubusercontent.com/mflJefferson/ar-literacy-slim/master/app/Patterns/pattern-g.patt"
+              id="g" registerevents>
     </a-marker>
+
+    <a-marker preset="pattern"
+              type="pattern"
+              url="https://raw.githubusercontent.com/mflJefferson/ar-literacy-slim/master/app/Patterns/pattern-a.patt"
+              id="a" registerevents>
+    </a-marker>
+
+    <a-marker preset="pattern"
+              type="pattern"
+              url="https://raw.githubusercontent.com/mflJefferson/ar-literacy-slim/master/app/Patterns/pattern-t.patt"
+              id="t" registerevents>
+    </a-marker>
+
+    <a-marker preset="pattern"
+              type="pattern"
+              url="https://raw.githubusercontent.com/mflJefferson/ar-literacy-slim/master/app/Patterns/pattern-o.patt"
+              id="o" registerevents>
+
+    </a-marker>
+
     <a-entity camera></a-entity>
+
+    <a-entity run></a-entity>
+
 </a-scene>
-
-
 </body>
+<script>
+    AFRAME.registerComponent("registerevents", {
+        init: function () {
+            var el = this.el;
+
+            marker.addEventListener("markerFound", function () {
+                var markerId = el.id;
+
+                if (game.validateLetter(markerId)) {
+                    game.addLetter(markerId);
+                }
+                if (game.validateWord()) {
+                    console.log("Parabens");
+                }
+                console.log("markerFound", markerId);
+            });
+        },
+    });
+
+    function createGame(puzzle) {
+        const state = {
+            puzzle,
+            word: [],
+        };
+
+        function addLetter(letter) {
+            state.word.push(letter);
+        }
+
+        function validateLetter(letter) {
+            const count = state.word.length;
+            return puzzle[count] === letter;
+        }
+
+        function validateWord() {
+            const wordStr = state.word.join("");
+            return wordStr === state.puzzle;
+        }
+
+        return { state, addLetter, validateWord, validateLetter };
+    }
+</script>
+
 </html>
